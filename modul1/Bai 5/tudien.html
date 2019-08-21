@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="input1">
+        <button onclick="dich();">Dich</button>
+        <p id="trans"></p>
+    <script>
+    var tiengNhat = ["人間","動物","悪魔"];
+    var tiengViet = ["Con nguoi", "Dong vat" ,"Ac quy"];
+    function dich(){
+        var inputtxt = document.getElementById("input1").value;
+        for(var i = 0 ; i<=tiengNhat.length ; i++){
+            if(inputtxt===tiengNhat[i]){
+                var index = i ;
+            }
+        }document.getElementById("trans").innerHTML=tiengViet[index];
+    }
+    </script>
+</body>
+</html>

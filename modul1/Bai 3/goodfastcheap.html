@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link href="goodfastcheap.css" rel="stylesheet">
+
+<body>
+    <div class="toggle-button-demo">
+        <h4>
+            <p>FAST</p>
+            <input class="toggle toggle-ios" id="01" type="checkbox" onclick="func01();" />
+            <label class="toggle-btn" for="01"></label>
+            <br>
+
+            <p>CHEAP</p>
+            <input class="toggle toggle-ios" id="02" type="checkbox" onclick="func02();" />
+            <label class="toggle-btn" for="02"></label>
+
+            <br>
+            <p>GOOD</p>
+            <input class="toggle toggle-ios" id="03" type="checkbox" onclick="func03();" />
+            <label class="toggle-btn" for="03"></label>
+        </h4>
+    </div>
+
+
+    <script>
+
+        function func01() {
+            let a = document.getElementById("01").checked;
+            let b = document.getElementById("02").checked;
+            let c = document.getElementById("03").checked;
+            if (a == true) {
+                if (b == true)
+                    document.getElementById("03").checked = false
+            }
+        }
+        function func02() {
+            let a = document.getElementById("01").checked;
+            let b = document.getElementById("02").checked;
+            let c = document.getElementById("03").checked;
+            if (b == true)
+                if (c == true)
+                    document.getElementById("01").checked = false
+        }
+        function func03() {
+            let a = document.getElementById("01").checked;
+            let b = document.getElementById("02").checked;
+            let c = document.getElementById("03").checked;
+            if (c == true)
+                if (a == true)
+                    document.getElementById("02").checked = false
+        }
+    </script>
+</body>
+
+</html>

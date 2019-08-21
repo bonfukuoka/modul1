@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif">Adam vs Eva</h1>
+    <p> <input type="button" value="Adam" id="adam" onclick="AdamEat()"> </p>
+    <span id="weightAdam"> </span>
+    <p id="apple"> </p> 
+    <p> <input type="button" value="Eva" id="eva" onclick="EvaEat()"></p>
+    <span id="weightEva"> </span>
+    <script>
+        class Apple {
+            constructor() {
+                this.weight = 10;
+            }
+            decrease() {
+                this.weight--;
+            }
+            isEmpty() {
+                return this.weight > 0 ? true : false;
+            }
+            getWeight() {
+                return this.weight;
+            }
+        }
+        class Human {
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            isMale() {
+                return this.gender;
+            }
+            checkApple(objapple) {
+                return (objapple.weight > 0) ? true : false;
+            }
+            eat(apple) {
+                if (apple.isEmpty()) {
+                    apple.decrease();
+                    this.weight++;
+                } else
+                    alert("Táo đã ăn hết!");
+            }
+            say(message) {
+                console.log(message);
+            }
+            setGender(gender) {
+                this.gender = gender;
+            }
+            getWeghit() {
+                return this.weight;
+            }
+            setWeghit(weight) {
+                this.weight = weight;
+            }
+            getName() {
+                return this.name;
+            }
+            setName(name) {
+                this.name = name;
+            }
+        };
+        var apple = new Apple();
+        var adam = new Human("Adam", "Gay", 50);
+        var eva = new Human("Eva", "Less", 45);
+        document.getElementById("apple").innerHTML = apple.weight;
+        document.getElementById("weightAdam").innerHTML = adam.weight;
+        document.getElementById("weightEva").innerHTML = eva.weight;
+        function AdamEat() {
+            adam.eat(apple);
+            document.getElementById("apple").innerHTML = apple.weight;
+            weightAdam = document.getElementById("weightAdam");
+            weightAdam.innerHTML = adam.weight;
+            adam.say("Anh cắn 1 miếng");
+        };
+        function EvaEat() {
+            eva.eat(apple);
+            appleHtml = document.getElementById("apple").innerHTML = apple.weight;
+            weightEva = document.getElementById("weightEva");
+            weightEva.innerHTML = eva.weight;
+            eva.say("Em cắn 1 miếng");
+        }
+    </script>
+</body>
+
+</html>

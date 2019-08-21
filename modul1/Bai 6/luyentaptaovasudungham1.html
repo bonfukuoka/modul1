@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Tao ham alertMessage 
+        /*function alertMessage(){
+            alert("Xin Chao");
+        }
+        alertMessage();*/
+
+        //Tao ham nhan vao 1 doi so dang so 
+        /*function Num(num){
+        var kq = ++num ;
+        alert(kq);
+        }
+        Num(5);*/
+
+        //Tao ham nhan vao 2 tham so 
+        /*function hienThi(a , b ){
+            if(a>b){
+                alert(a+">"+b);
+            }else{
+                var tong = a + b;
+                alert(tong);
+            }
+        }hienThi(9 , 7);*/
+
+        //Them hang alert
+        /*function addNumbers() {
+            var firstNum = 4;
+            var secondNum = 8;
+            var result = firstNum + secondNum;
+            return result;
+        }
+        result = 0;
+        result = addNumbers();
+        alert(result);*/
+
+        //Tao mang vs phan tu ngoi sao 
+        var Array1 = [ "Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus" ];
+        var Array2 = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor" , "Leo"];
+        var input = prompt("Nhap ten ngoi sao");
+        let result = star(input);
+        function star(name){
+            var check = false;
+            for(var i = 1 ; i<=Array1.length ; i++){
+                if(Array1[i] === name){
+                    check =true;
+                    console.log(Array2[i]);
+                }
+            }
+            if (check ==false){
+                    console.log(' Khong thay!')
+                }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="email">
+    <input type="button" id="check" onclick="Check()" value="Check">
+    <script>
+        function Check(str) {
+            str = document.getElementById('email').value;
+            regexp = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (regexp.test(str)) {
+                console.log("Email hop le");
+            }else{
+                console.log("Email khong hop le");
+            }
+        }
+    </script>
+</body>
+
+</html>

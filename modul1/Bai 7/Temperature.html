@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+            constructor(doC) {
+                this.doC = doC;
+            }
+            getDoC() {
+                return this.doC;
+            }
+            setdoC(doC) {
+                this.doC = doC;
+            }
+            changeF() {
+               return (this.doC * 1.8) + 32;
+            }
+            changeKenvin(){
+                return this.doC +273.15; 
+            }
+        }
+        let temperature = new Temperature(20);
+        temperature.setdoC(30);
+        console.log (temperature.getDoC());
+        console.log (temperature.changeF());
+        console.log (temperature.changeKenvin());
+    </script>
+</body>
+
+</html>
